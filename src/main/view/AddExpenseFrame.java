@@ -16,7 +16,6 @@ public class AddExpenseFrame extends JFrame {
 
     public AddExpenseFrame(ExpenseManager expenseManager) {
         this.expenseManager = expenseManager;
-        
         setTitle("Add Expense");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -41,7 +40,7 @@ public class AddExpenseFrame extends JFrame {
                 }
                 String category = (String) categoryField.getSelectedItem();
                 String date = dateField.getText();
-
+ 
                 Expense expense = new Expense(name, amount, category, date);
                 expenseManager.addExpense(expense);
                 JOptionPane.showMessageDialog(null, "Expense added successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
