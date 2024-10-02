@@ -8,11 +8,13 @@ import model.Expense;
 
 public class ExportToCSV {
     public static void export(List<Expense> expenses, String filename) throws IOException {
+	//set file readers 
         FileWriter fileWriter = new FileWriter(filename);
         PrintWriter printWriter = new PrintWriter(fileWriter);
 
         printWriter.println("Name,Amount,Category,Date");
-
+		
+		// read csv file
         for (Expense expense : expenses) {
             printWriter.printf("%s,%.2f,%s,%s%n",
                     expense.getName(),
