@@ -7,8 +7,10 @@ public class UserManager {
     private static HashMap<String, Integer> loginAttempts = new HashMap<>();
     private static final int MAX_ATTEMPTS = 5;
 
+
+	//set user and passwords 
     static {
-        users.put("user1", "password1");
+        users.put("b6621650213", "password123");
         users.put("user2", "password2");
     }
 
