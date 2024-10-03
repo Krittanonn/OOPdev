@@ -6,6 +6,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+//create field username and password 
 public class AddExpenseFrame extends JFrame {
     private JTextField nameField;
     private JTextField amountField;
@@ -13,20 +15,23 @@ public class AddExpenseFrame extends JFrame {
     private JTextField dateField;
     private JButton addButton;
     private ExpenseManager expenseManager;
-
+	
+	//creata newJframe for addExpense function
     public AddExpenseFrame(ExpenseManager expenseManager) {
         this.expenseManager = expenseManager;
         setTitle("Add Expense");
-        setSize(300, 200);
+        setSize(300, 200); //set solution frame
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
-
+	
+		//set UI page addExpense
         nameField = new JTextField(20);
         amountField = new JTextField(20);
         categoryField = new JComboBox<>(new String[] { "Food", "Travel", "Entertainment" });
         dateField = new JTextField(20);
         addButton = new JButton("Add Expense");
-
+		
+		//create button for input data
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
