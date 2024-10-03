@@ -20,10 +20,10 @@ public class LoginFrame extends JFrame {
         
         usernameField = new JTextField(20);
         passwordField = new JPasswordField(20);
-        
         loginButton = new JButton("Login");
         resetPasswordButton = new JButton("Reset Password");
         
+		//function check username password
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,6 +39,7 @@ public class LoginFrame extends JFrame {
             }
         });
         
+		//function reset password
         resetPasswordButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,6 +47,8 @@ public class LoginFrame extends JFrame {
             }
         });
         
+
+		//add object in panel
         JPanel panel = new JPanel();
         panel.add(new JLabel("Username:"));
         panel.add(usernameField);
