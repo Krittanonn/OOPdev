@@ -5,7 +5,8 @@ public class Main {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new LoginFrame().setVisible(true);
+				// rubn frist in loginframe for login user            
+				new LoginFrame().setVisible(true);
             }
         });
     }
